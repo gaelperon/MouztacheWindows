@@ -1,0 +1,9 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:awe="http://schemas.awesomium.com/winfx" x:Class="Mouztache.Desktop.MainWindow"
+        Title="Mouztâche" Height="700" Width="560" WindowStartupLocation="CenterOwner" Icon="icon.ico">
+	<Grid>
+		<awe:WebControl x:Name="PART_WebView"/>
+	</Grid>
+</Window>
