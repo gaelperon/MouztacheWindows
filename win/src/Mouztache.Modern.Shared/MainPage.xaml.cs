@@ -9,9 +9,9 @@ namespace Mouztache.Modern
     public sealed partial class MainPage : Page
     {
 #if WINDOWS_APP
-		private const string ServiceUrl = "http://www.mouztache.com/?platform=windows-store";
+		private const string ServiceUrl = "http://www.mouztache.com/#/device/windows-store";
 #elif WINDOWS_PHONE_APP
-		private const string ServiceUrl = "http://www.mouztache.com/?platform=windows-phone";
+		private const string ServiceUrl = "http://epsilonprod.mouztache.com/#/device/windows-phone";
 #endif
 
 		public MainPage()

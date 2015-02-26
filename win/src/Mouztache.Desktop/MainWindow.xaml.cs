@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Awesomium.Core;
+using System;
+using System.Reflection;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Mouztache.Desktop
 {
@@ -25,6 +15,11 @@ namespace Mouztache.Desktop
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			// Persist web local storage
+			var webSession = WebCore.CreateWebSession(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), Awesomium.Core.WebPreferences.Default);
+			PART_WebView.WebSession = webSession;
+
 			PART_WebView.Source = new Uri(ServiceUrl);
 		}
 	}
